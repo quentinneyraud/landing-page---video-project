@@ -48,15 +48,11 @@ $color--extra-dark: #000000;
 $color--text: $color--dark;
 $color--text-light: #ffffff;
 
+$playfaire: 'Playfair Display', serif;
 
-$montserrat--black: 'Montserrat Black';
-@include font-face($montserrat--black, '../fonts/Montserrat/montserrat-black-webfont');
 
-$montserrat--extra-light: 'Montserrat Hairline';
-@include font-face($montserrat--extra-light, '../fonts/Montserrat/montserrat-hairline-webfont');
-
-$montserrat--light: 'Montserrat Light';
-@include font-face($montserrat--light, '../fonts/Montserrat/montserrat-light-webfont');
+/*$montserrat--light: 'Montserrat Light';
+@include font-face($montserrat--light, '../fonts/Montserrat/montserrat-light-webfont');*/
 
 $line-height--basic: 2.2rem;
 
