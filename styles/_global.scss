@@ -1,0 +1,52 @@
+/**************
+*            *
+*   GLOBAL   *
+*            *
+**************/
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+html {
+    overflow-x: hidden;
+
+    background-color: $color--extra-light;
+    color: $color--text;
+    font-family: $montserrat--light;
+    font-size: 10px;
+}
+
+
+::selection {
+    color: $color--text;
+    background: $color--main;
+}
+
+::-moz-selection {
+    color: $color--text;
+    background: $color--main;
+}
+
+
+body {
+    font-size: 1.6rem; // ==== 16px
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.title {
+    text-transform: uppercase;
+
+    &--h1 {}
+    &--h2 {}
+    &--h3 {}
+}

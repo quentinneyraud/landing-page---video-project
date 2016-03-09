@@ -1,0 +1,65 @@
+/*****************
+ *               *
+ *   VARIABLES   *
+ *               *
+ *****************/
+
+
+$screen--sm-min: 780px;
+$screen--md-min: 1000px;
+$screen--lg-min: 1200px;
+
+
+$break--xs-max: 'max-width:' + ($screen--sm-min - 1);
+
+$break--sm-min: 'min-width:' + $screen--sm-min;
+$break--sm-max: 'max-width:' + ($screen--md-min - 1);
+
+$break--md-min: 'min-width:' + $screen--md-min;
+$break--md-max: 'max-width:' + ($screen--lg-min - 1);
+
+$break--lg-min: 'min-width:' + $screen--lg-min;
+
+/* Basic media-queries usage example :
+ *  @media $break--md-min and $break--md-max --> @media (min-width: 992px) and (max-width: 1019px)
+ */
+
+
+
+$margin--standard: 15px;
+$padding--standard: 15px;
+
+
+/*
+/!\ DO NO USE THIS VARS */
+$red: red;
+
+// Use this :
+$color--main: $red;
+
+$color--extra-light: #ffffff;
+$color--lighter: #f5f6f8;
+$color--light: #d3d3d3;
+$color--medium: #8d8e90;
+$color--dark: #333333;
+$color--darker: #232323;
+$color--extra-dark: #000000;
+
+$color--text: $color--dark;
+$color--text-light: #ffffff;
+
+
+$montserrat--black: 'Montserrat Black';
+@include font-face($montserrat--black, '../fonts/Montserrat/montserrat-black-webfont');
+
+$montserrat--extra-light: 'Montserrat Hairline';
+@include font-face($montserrat--extra-light, '../fonts/Montserrat/montserrat-hairline-webfont');
+
+$montserrat--light: 'Montserrat Light';
+@include font-face($montserrat--light, '../fonts/Montserrat/montserrat-light-webfont');
+
+$line-height--basic: 2.2rem;
+
+
+$out-back: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+$swift: cubic-bezier(.62,.28,.23,.99);

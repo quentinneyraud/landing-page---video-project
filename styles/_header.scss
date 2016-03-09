@@ -1,0 +1,57 @@
+/**************
+ *            *
+ *   HEADER   *
+ *            *
+ **************/
+
+
+.main-header {}
+
+
+.main-menu {
+    display: flex;
+    align-items: center;
+
+    &__logo {
+        width: 50px;
+        height: 50px;
+        color: red;
+        stroke: currentColor;
+    }
+}
+
+
+.main-nav {
+    margin-left: auto;
+
+    &__list {
+        display: flex;
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+    }
+
+    &__item {
+
+        &--item {}
+
+        &--has-child {}
+
+        &--hamburger {}
+
+        a {
+            padding: 10px;
+        }
+    }
+}
+
+
+.hambuger {}
+
+
+.heading-page {
+
+    &__title {}
+
+    &__subtitle {}
+}

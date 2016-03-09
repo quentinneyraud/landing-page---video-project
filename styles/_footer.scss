@@ -1,0 +1,78 @@
+/*************
+*            *
+*   FOOTER   *
+*            *
+**************/
+
+
+.main-footer {}
+
+
+.foot-page {
+
+    &__title {}
+}
+
+
+.footer-menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &__logo {
+        width: 50px;
+        height: 50px;
+        color: red;
+        stroke: currentColor;
+    }
+}
+
+
+.sitemap {
+    margin-left: auto;
+
+    &__list {
+        display: flex;
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+    }
+
+    &__item {
+
+        &--active {}
+
+        a {
+            padding: 10px;
+        }
+    }
+}
+
+
+.legals {
+    flex-basis: 100%;
+
+    &__text {}
+}
+
+
+.social-links {
+
+    &__list {
+        display: flex;
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+    }
+
+    &__item {
+        font-size: 0;
+
+        svg {
+            width: 50px;
+            height: 50px;
+            color: red;
+            fill: currentColor;
+        }
+    }
+}
