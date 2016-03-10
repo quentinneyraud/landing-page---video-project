@@ -48,13 +48,25 @@ $color--extra-dark: #000000;
 $color--text: $color--dark;
 $color--text-light: #ffffff;
 
-$playfaire: 'Playfair Display', serif;
+// Fonts
 
-$roboto--ultra-bold: 'Roboto', sans-serif;
 @import url(https://fonts.googleapis.com/css?family=Roboto:900);
+@font-face {font-family:"28 Days Later";
+  src:url("../fonts/28_Days_Later.eot?") format("eot"),
+  url("../fonts/28_Days_Later.woff") format("woff"),
+  url("../fonts/28_Days_Later.ttf") format("truetype");
+  font-weight:normal;font-style:normal;}
+@import url(https://fonts.googleapis.com/css?family=Bad+Script);
+@import url(https://fonts.googleapis.com/css?family=Neucha);
+
+$playfaire: 'Playfair Display', serif;
+$roboto--ultra-bold: 'Roboto', sans-serif;
+$days-later: '28 Days Later', serif;
+$bad-script: 'Bad Script', cursive;
+$neucha: 'Neucha', cursive;
+
 
 $font--main: sans-serif;
-
 $line-height--basic: 2.2rem;
 
 

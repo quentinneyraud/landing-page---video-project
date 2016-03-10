@@ -17,11 +17,17 @@
   },
   "homepage": "https://github.com/quentinneyraud/landing-page---video-project#readme",
   "devDependencies": {
-    "browser-sync": "^2.10.1",
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-livereload": "^3.8.1",
-    "gulp-sass": "^2.1.1",
-    "gulp-sourcemaps": "^1.6.0"
+    "browser-sync": "*",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "*",
+    "gulp-babel": "*",
+    "gulp-cache": "*",
+    "gulp-concat": "*",
+    "gulp-imagemin": "*",
+    "gulp-minify-css": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "*"
   }
 }

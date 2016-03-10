@@ -1,0 +1,34 @@
+section{
+  padding-top: 75px;
+  .section__title{
+    font-family: $neucha;
+    font-size: 60px;
+    color: #777;
+    border-top: solid 2px #aaa;
+    border-bottom: solid 2px #aaa;
+    padding: 20px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    &.right{
+      text-align: right;
+    }
+  }
+  p{
+    padding: 20px 0;
+  }
+
+  iframe{
+    display: block;
+    margin: auto;
+  }
+}
+
+span.exergue{
+  padding: 10px 50px;
+  font-size: 40px;
+  font-family: $bad-script;
+  border-top: solid 1px #000;
+  border-bottom: solid 1px #000;
+  margin: 15px 0;
+}
+

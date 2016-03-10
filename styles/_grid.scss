@@ -1,0 +1,127 @@
+/*---------------------------------------------------*\
+$Variables
+\*---------------------------------------------------*/
+$colonnes: 12 !default;
+$goutieres: 20px !default;
+$medium: 640px !default;
+$large: 1040px !default;
+/*---------------------------------------------------*\
+$Mixins
+\*---------------------------------------------------*/
+@mixin responsive-colonnes($suffix: '') {
+  @for $i from 0 through $colonnes {
+    @if $i != 0 {
+      .col#{$suffix}-#{$i} {
+        width: $i / $colonnes * 100%;
+      }
+      .col#{$suffix}-center {
+        margin: 0 auto;
+        float: none;
+      }
+      .col#{$suffix}-center {
+        margin: 0 auto;
+        float: none;
+      }
+      .col#{$suffix}-push-#{$i} {
+        left: $i / $colonnes * 100%;
+      }
+      .col#{$suffix}-offset-#{$i} {
+        margin-left: $i / $colonnes * 100%;
+      }
+      .col#{$suffix}-pull-#{$i} {
+        left: $i / $colonnes * 100%;
+      }
+    }
+  }
+}
+
+/*---------------------------------------------------*\
+$Extends
+\*---------------------------------------------------*/
+%col {
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding: 0 $goutieres * 0.5;
+}
+
+%clearfix {
+  &:before, &:after {
+    content: '';
+    display: table;
+  }
+;
+  &:after {
+    clear: both;
+  }
+;
+  & {
+    zoom: 1;
+  }
+}
+
+/*---------------------------------------------------*\
+$Class
+\*---------------------------------------------------*/
+.container {
+  margin: 0 -$goutieres * -0.5;
+  @extend %clearfix;
+}
+
+/*---------------------------------------------------*\
+$Grid
+\*---------------------------------------------------*/
+@for $i from 1 through $colonnes {
+  .col-s-#{$i} {
+    @extend %col;
+    width: $i / $colonnes * 100%;
+  }
+}
+
+.m-show {
+  display: none;
+}
+
+.l-show {
+  display: none;
+}
+
+@include responsive-colonnes('-s');
+/*---------------------------------------------------*\
+$Responsive
+\*---------------------------------------------------*/
+/*------ Tablet ------*/
+@media only screen and (min-width: $medium) {
+  .col-m-center {
+    margin: 0 auto;
+    float: none;
+  }
+  @include responsive-colonnes('-m');
+  .m-hidden {
+    display: none;
+  }
+  .s-show {
+    display: none;
+  }
+  .m-show {
+    display: block;
+  }
+}
+
+/*------ Screen ------*/
+@media only screen and (min-width: $large) {
+  .col-l-center {
+    margin: 0 auto;
+    float: none;
+  }
+  @include responsive-colonnes('-l');
+  .l-hidden {
+    display: none;
+  }
+  .m-show {
+    display: none;
+  }
+  .l-show {
+    display: block;
+  }
+}
