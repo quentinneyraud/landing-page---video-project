@@ -5,7 +5,35 @@
  **************/
 
 
-.main-header {}
+.main-header {
+
+    &__titles {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 1;
+        width: 100%;
+
+    }
+
+    &__title {
+        color: #ffffff;
+        top: 25%;
+        font-size: 100px;
+        font-family: $font--title;
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        text-transform: uppercase;
+        padding-top: 10px;
+        color: #fff;
+        font-family: $circular--medium;
+        font-weight: 300;
+    }
+}
 
 
 .main-menu {
@@ -44,10 +72,6 @@
         }
     }
 }
-
-
-.hambuger {}
-
 
 .heading-page {
 

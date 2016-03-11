@@ -1,12 +1,12 @@
 section{
   padding-top: 75px;
   .section__title{
-    font-family: $neucha;
+    font-family: $goku;
     font-size: 60px;
-    color: #777;
-    border-top: solid 2px #aaa;
-    border-bottom: solid 2px #aaa;
-    padding: 20px;
+    color: $color--medium;
+    border-top: solid 1px $color--medium;
+    border-bottom: solid 1px $color--medium;
+    padding: 20px 0;
     margin-bottom: 40px;
     text-transform: uppercase;
     &.right{
