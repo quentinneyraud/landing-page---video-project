@@ -4,6 +4,7 @@ import Pager from './Pager';
 import TweenMax from 'gsap';
 import './../../node_modules/gsap/src/minified/TweenMax.min';
 import './../../node_modules/gsap/src/minified/plugins/ScrollToPlugin.min';
+import AudioPlayer from './AudioPlayer';
 
 class App {
     constructor() {
@@ -42,7 +43,10 @@ class App {
         }
         if(this.page !== page) {
             let pager = new Pager(page);
-            pager.fillContainer(this.$els.sectionContainer);
+            pager.fillContainer(this.$els.sectionContainer, function() {
+                new AudioPlayer();
+            });
+
         }
         this.page = page;
     }

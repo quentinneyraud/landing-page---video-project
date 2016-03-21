@@ -1,0 +1,111 @@
+/**************
+ *            *
+ *   PLAYER   *
+ *            *
+ **************/
+
+.audio-player {
+    $player-background: $color--dark;
+
+    $play-button-width: 30px;
+    $play-button-height: $play-button-width;
+    $play-button-background: $player-background;
+    $play-button-color: #fff;
+
+    $title-color: #fff;
+
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    border-radius: 2px;
+    background-color: $color--dark;
+    font-size: 0;
+
+    &__title {
+        display: inline-block;
+        width: calc(100% - (#{$play-button-width} + 20px));
+        vertical-align: middle;
+
+        font-family: $circular--book;
+        font-size: 1.6rem;
+        color: $title-color;
+    }
+
+
+    .play-button {
+        display: inline-block;
+        position: relative;
+        width: $play-button-width;
+        height: $play-button-height;
+        margin-right: 20px;
+        vertical-align: middle;
+        overflow: hidden;
+
+        background-color: $play-button-background;
+
+        &__left {
+            height: 100%;
+            float: left;
+            width: 36%;
+            overflow: hidden;
+
+            background-color: $play-button-color;
+
+            transition: width 0.25s ease;
+        }
+
+        &__right {
+            height: 100%;
+            float: right;
+            width: 36%;
+
+            background-color: $play-button-color;
+
+            transition: width 0.25s ease;
+        }
+
+        &__triangle {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+
+            border-right: $play-button-width solid $play-button-background;
+            border-top: $play-button-width/2 solid transparent;
+            border-bottom: $play-button-width/2 solid transparent;
+            background-color: transparent;
+
+            transition: transform 0.25s ease;
+
+            &--1 {
+                transform: translate(0,-100%);
+            }
+
+            &--2 {
+                transform: translate(0, 100%);
+            }
+        }
+    }
+
+    .paused.play-button {
+        .play-button__left {
+            width: 50%;
+        }
+
+        .play-button__right {
+            width: 50%;
+        }
+
+        .play-button__triangle {
+            &--1 {
+                transform: translate(0, -50%);
+            }
+            &--2 {
+                transform: translate(0, 50%);
+            }
+        }
+    }
+}
+
