@@ -1,6 +1,9 @@
 import $ from 'jquery';
 import Router from './Router';
 import Pager from './Pager';
+import TweenMax from 'gsap';
+import './../../node_modules/gsap/src/minified/TweenMax.min';
+import './../../node_modules/gsap/src/minified/plugins/ScrollToPlugin.min';
 
 class App {
     constructor() {
@@ -46,6 +49,12 @@ class App {
     
     onPageChange() {
         this.detectPage();
+        this.anim();
+    }
+    
+    anim() {
+        let scrollValue = 90 * this.$els.window.height() / 100;
+        TweenMax.to(this.$els.window, 1, {scrollTo:{y:scrollValue}, ease:Power2.easeOut});
     }
 }
 
