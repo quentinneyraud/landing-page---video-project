@@ -50,21 +50,12 @@ $color--text-light: #ffffff;
 
 // Fonts
 
-$bad-script: 'Bad Script', cursive;
-$roboto: 'Roboto', sans-serif;
 $goku: 'Goku';
-$cutive-mono: 'Cutive Mono';
-$oswald: 'Oswald', sans-serif;
 $circular--medium: 'Circular Medium';
 $circular--bold: 'Circular Bold';
 $circular--book: 'Circular Book';
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
-@import url(https://fonts.googleapis.com/css?family=Bad+Script);
-@import url(https://fonts.googleapis.com/css?family=Cutive+Mono);
-@import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
 @include font-face($goku, '../fonts/goku/goku-webfont');
-
 @include font-face($circular--medium, '../fonts/circular/Circular-Medium');
 @include font-face($circular--bold, '../fonts/circular/Circular-Bold');
 @include font-face($circular--book, '../fonts/circular/Circular-Book');
