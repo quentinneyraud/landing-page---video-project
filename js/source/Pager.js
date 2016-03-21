@@ -7,8 +7,10 @@ export default class Pager {
         this.page = page;
     }
     
-    fillContainer(el) {
+    fillContainer(el, cb) {
         let file = this.page + '.html';
-        $(el).load(baseTemplateFolder + file);
+        $(el).load(baseTemplateFolder + file, function() {
+            cb();
+        });
     }
 }

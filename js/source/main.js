@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import Router from './Router';
 import Pager from './Pager';
+import AudioPlayer from './AudioPlayer';
 
 class App {
     constructor() {
@@ -39,7 +40,10 @@ class App {
         }
         if(this.page !== page) {
             let pager = new Pager(page);
-            pager.fillContainer(this.$els.sectionContainer);
+            pager.fillContainer(this.$els.sectionContainer, function() {
+                new AudioPlayer();
+            });
+
         }
         this.page = page;
     }
