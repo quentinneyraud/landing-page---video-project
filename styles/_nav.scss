@@ -36,10 +36,11 @@ nav{
     position: absolute;
     top: 95%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    font-size: 25px;
-    font-family: $circular--bold;
-    font-weight:lighter;
+    font-size: 20px;
+    font-family: $lato;
+    font-weight: lighter;
     color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }

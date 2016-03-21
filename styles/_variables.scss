@@ -54,12 +54,15 @@ $goku: 'Goku';
 $circular--medium: 'Circular Medium';
 $circular--bold: 'Circular Bold';
 $circular--book: 'Circular Book';
+$hanskendrick--light: 'Hanskendrick Light';
+$lato: 'Lato';
 
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
 @include font-face($goku, '../fonts/goku/goku-webfont');
 @include font-face($circular--medium, '../fonts/circular/Circular-Medium');
 @include font-face($circular--bold, '../fonts/circular/Circular-Bold');
 @include font-face($circular--book, '../fonts/circular/Circular-Book');
-
+@include font-face($hanskendrick--light, '../fonts/hanskendrick/hanskendrick-light-webfont');
 
 $font--main: $circular--book;
 $font--title: $goku;

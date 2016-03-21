@@ -27,15 +27,16 @@ export default class AudioPlayer {
 
     togglePlayer(player) {
 
-        player.playButton.toggleClass("paused");
 
         if (player.audio.readyState == '4') {
 
-            if (player.audio.paused)
+            if (player.audio.paused) {
+                player.playButton.toggleClass("paused");
                 player.audio.play();
-
-            else
+            } else {
+                player.playButton.toggleClass("paused");
                 player.audio.pause();
+            }
         }
 
         else
