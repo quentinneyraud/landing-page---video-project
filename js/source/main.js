@@ -11,6 +11,7 @@ class App {
         this.initializeElements();
         this.initializeListeners();
         this.animateHeader();
+        this.firstRun = true;
     }
     
     initializeElements() {
@@ -61,7 +62,11 @@ class App {
         if(['sonorite'].indexOf(this.page) > -1) {
             this.audioPlayer = new AudioPlayer();   
         }
-        this.animScroll();
+        if(!this.firstRun) {
+            this.animScroll();
+        }else{
+            this.firstRun = false;
+        }
         this.animContainer();
     }
     

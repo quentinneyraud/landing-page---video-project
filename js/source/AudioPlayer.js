@@ -4,7 +4,7 @@ export default class AudioPlayer {
 
     constructor() {
 
-        let players = [];
+        /*let players = [];
 
         let playersTemp = $('.audio-player'),
             playerTemp = null;
@@ -22,6 +22,24 @@ export default class AudioPlayer {
 
         for (var i in players) {
             players[i].playButton.on('click', this.togglePlayer.bind(this, players[i]));
+        }*/
+
+        this.players = $('.audio-player').map((e) => {
+
+            let element = $(e);
+            return {
+                el: element,
+                playButton: $('.play-button', element),
+                audio: new Audio('./audio/' + element.data('audio'))
+            }
+        });
+
+        this.addListener();
+    }
+
+    addListener() {
+        for(let player in this.players) {
+            player.playButton.on('click', this.togglePlayer.bind(this, player));
         }
     }
 
