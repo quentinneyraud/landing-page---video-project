@@ -55,6 +55,8 @@ gulp.task('scripts', function () {
     });
 })
 
+gulp.task('build', ['images', 'styles', 'scripts']);
+
 gulp.task('default', ['browser-sync'], function () {
     gulp.watch("styles/**/*.scss", ['styles']);
     gulp.watch("js/source/**/*.js", ['scripts']);
