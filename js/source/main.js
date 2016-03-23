@@ -2,7 +2,6 @@ import $ from 'jquery';
 import Router from './Router';
 import Pager from './Pager';
 import TweenMax from 'gsap';
-import './../../node_modules/gsap/src/minified/TweenMax.min';
 import './../../node_modules/gsap/src/minified/plugins/ScrollToPlugin.min';
 import AudioPlayer from './AudioPlayer';
 
