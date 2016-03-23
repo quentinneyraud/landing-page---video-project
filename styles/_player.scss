@@ -7,21 +7,21 @@
 .audio-player {
     $player-background: $color--lighter;
 
-    $play-button-width: 30px;
+    $play-button-width: 16px;
     $play-button-height: $play-button-width;
-    $play-button-background: $color--dark;
+    $play-button-background: $color--medium;
     $play-button-color: $color--lighter;
 
-    $title-color: $color--dark;
+    $title-color: $color--medium;
 
     position: relative;
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     margin-bottom: 20px;
 
     border-radius: 3px;
     background-color: $player-background;
-    border: solid 1px $color--dark;
+    border: solid 1px $play-button-background;
     font-size: 0;
 
     &::before {
@@ -29,14 +29,14 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-color: $color--dark;
-        width: 70px;
+        background-color: $play-button-background;
+        width: 40px;
         height: 100%;
     }
 
     &__title {
         display: inline-block;
-        width: calc(100% - (#{$play-button-width} + 41px));
+        width: calc(100% - (#{$play-button-width} + 31px));
         vertical-align: middle;
 
         font-family: $circular--book-italic;
@@ -51,7 +51,7 @@
         position: relative;
         width: $play-button-width;
         height: $play-button-height;
-        margin-right: 40px;
+        margin-right: 30px;
         vertical-align: middle;
         overflow: hidden;
 
