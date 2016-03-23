@@ -54,6 +54,7 @@ $goku: 'Goku';
 $circular--medium: 'Circular Medium';
 $circular--bold: 'Circular Bold';
 $circular--book: 'Circular Book';
+$circular--book-italic: 'Circular Book Italic';
 $hanskendrick--light: 'Hanskendrick Light';
 $lato: 'Lato';
 
@@ -62,6 +63,7 @@ $lato: 'Lato';
 @include font-face($circular--medium, '../fonts/circular/Circular-Medium');
 @include font-face($circular--bold, '../fonts/circular/Circular-Bold');
 @include font-face($circular--book, '../fonts/circular/Circular-Book');
+@include font-face($circular--book-italic, '../fonts/circular/Circular-BookItalic');
 @include font-face($hanskendrick--light, '../fonts/hanskendrick/hanskendrick-light-webfont');
 
 $font--main: $circular--book;

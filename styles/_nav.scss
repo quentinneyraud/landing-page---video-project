@@ -17,6 +17,13 @@ nav{
 
 .panel:hover{
     flex-basis: 30%;
+
+    .panel__title {
+        opacity: 1 !important;
+        visibility: visible !important;
+
+        transition: opacity .3s ease-out;
+    }
 }
 
 .panel:hover .panel__background{
@@ -43,4 +50,6 @@ nav{
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 1px;
+
+    transition: opacity .3s ease-out, visibility 0s linear .3s;
 }

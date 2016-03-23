@@ -10,6 +10,7 @@ class App {
     constructor() {
         this.initializeElements();
         this.initializeListeners();
+        this.animateHeader();
     }
     
     initializeElements() {
@@ -77,6 +78,20 @@ class App {
     animateContainerLeave(cb) {
         let container = $('.container');
         TweenMax.to(container, 0.5, { y: 50, autoAlpha: 0, onComplete: function() { cb(); }});
+    }
+
+    animateHeader() {
+        let $header = $('.main-header', this.$els.body)
+        let $panelTitles = $('.main__nav .panel__title', $header);
+
+        let controller = new ScrollMagic.Controller();
+
+        let tween = TweenMax.from($panelTitles, 1, {autoAlpha: 0});
+
+        new ScrollMagic.Scene({triggerElement: $header, duration: 700})
+            .setTween(tween)
+            //.addIndicators({name: "staggering"}) // add indicators (requires plugin)
+            .addTo(controller);
     }
 }
 
