@@ -42,23 +42,41 @@ class App {
             page = 'projet';
         }
         if(this.page !== page) {
+            if(this.audioPlayer) {
+                delete this.audioPlayer;
+            }
             let pager = new Pager(page);
-            pager.fillContainer(this.$els.sectionContainer, function() {
-                new AudioPlayer();
-            });
+            pager.fillContainer(this.$els.sectionContainer, this.onContentLoaded.bind(this));
 
         }
         this.page = page;
     }
     
     onPageChange() {
-        this.detectPage();
-        this.anim();
+        this.animateContainerLeave(this.detectPage.bind(this));
     }
     
-    anim() {
+    onContentLoaded() {
+        if(['sonorite'].indexOf(this.page) > -1) {
+            this.audioPlayer = new AudioPlayer();   
+        }
+        this.animScroll();
+        this.animContainer();
+    }
+    
+    animScroll() {
         let scrollValue = 90 * this.$els.window.height() / 100;
         TweenMax.to(this.$els.window, 1, {scrollTo:{y:scrollValue}, ease:Power2.easeOut});
+    }
+    
+    animContainer() {
+        let container = $('.container');
+        TweenMax.fromTo(container, 0.5, { y: 50, autoAlpha: 0.5 }, { y: 0, autoAlpha: 1 });
+    }
+    
+    animateContainerLeave(cb) {
+        let container = $('.container');
+        TweenMax.to(container, 0.5, { y: 50, autoAlpha: 0, onComplete: function() { cb(); }});
     }
 }
 
