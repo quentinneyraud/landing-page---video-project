@@ -4,7 +4,7 @@ import Pager from './Pager';
 import TweenMax from 'gsap';
 import './../../node_modules/gsap/src/minified/plugins/ScrollToPlugin.min';
 import AudioPlayer from './AudioPlayer';
-
+/*global ScrollMagic*/
 class App {
     constructor() {
         this.firstRun = true;
@@ -38,7 +38,6 @@ class App {
     
     onPageDetected(pageDetected) {
         let {page, error} = pageDetected;
-
         if(error) {
             page = 'projet';
         }
@@ -61,6 +60,7 @@ class App {
         if(['sonorite'].indexOf(this.page) > -1) {
             this.audioPlayer = new AudioPlayer();   
         }
+        console.log('first run', this.firstRun);
         if(this.firstRun) {
             this.firstRun = false;
         }else{
