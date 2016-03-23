@@ -1,20 +1,6 @@
 section {
     padding-top: 75px;
 
-    .section__title {
-        font-family: $goku;
-        font-size: 70px;
-        color: $color--medium;
-        border-top: solid 1px $color--medium;
-        border-bottom: solid 1px $color--medium;
-        padding: 20px 0;
-        margin-bottom: 40px;
-
-        &.right {
-            text-align: right;
-        }
-    }
-
     p {
         padding: 20px 0;
     }
@@ -25,16 +11,28 @@ section {
     }
 }
 
+.section {
+    &__title {
+        @extend .title1;
+
+        &.right {
+            text-align: right;
+        }
+    }
+
+    &__subtitle {
+        @extend .title2;
+
+        &--2 {
+            @extend .title3;
+        }
+
+        &.right {
+            text-align: right;
+        }
+    }
+}
+
 .sectionContainer {
     min-height: 100vh;
 }
-
-span.exergue {
-    padding: 10px 50px;
-    font-size: 40px;
-    font-family: $circular--bold;
-    border-top: solid 1px #000;
-    border-bottom: solid 1px #000;
-    margin: 15px 0;
-}
-
