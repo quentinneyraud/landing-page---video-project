@@ -8,10 +8,10 @@ import AudioPlayer from './AudioPlayer';
 
 class App {
     constructor() {
+        this.firstRun = true;
         this.initializeElements();
         this.initializeListeners();
         this.animateHeader();
-        this.firstRun = true;
     }
     
     initializeElements() {
@@ -62,10 +62,10 @@ class App {
         if(['sonorite'].indexOf(this.page) > -1) {
             this.audioPlayer = new AudioPlayer();   
         }
-        if(!this.firstRun) {
-            this.animScroll();
-        }else{
+        if(this.firstRun) {
             this.firstRun = false;
+        }else{
+            this.animScroll();
         }
         this.animContainer();
     }
