@@ -5,31 +5,44 @@
  **************/
 
 .audio-player {
-    $player-background: $color--dark;
+    $player-background: $color--lighter;
 
     $play-button-width: 30px;
     $play-button-height: $play-button-width;
-    $play-button-background: $player-background;
-    $play-button-color: #fff;
+    $play-button-background: $color--dark;
+    $play-button-color: $color--lighter;
 
-    $title-color: #fff;
+    $title-color: $color--dark;
 
+    position: relative;
     width: 100%;
     padding: 20px;
     margin-bottom: 20px;
 
-    border-radius: 2px;
-    background-color: $color--dark;
+    border-radius: 3px;
+    background-color: $player-background;
+    border: solid 1px $color--dark;
     font-size: 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $color--dark;
+        width: 70px;
+        height: 100%;
+    }
 
     &__title {
         display: inline-block;
-        width: calc(100% - (#{$play-button-width} + 20px));
+        width: calc(100% - (#{$play-button-width} + 41px));
         vertical-align: middle;
 
-        font-family: $circular--book;
+        font-family: $circular--book-italic;
         font-size: 1.6rem;
         color: $title-color;
+        line-height: 2rem;
     }
 
 
@@ -38,7 +51,7 @@
         position: relative;
         width: $play-button-width;
         height: $play-button-height;
-        margin-right: 20px;
+        margin-right: 40px;
         vertical-align: middle;
         overflow: hidden;
 
