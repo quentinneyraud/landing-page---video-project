@@ -1,4 +1,4 @@
-const allowedPages = ['projet', 'intention', 'synopsis', 'animatic', 'sonorite'];
+const allowedPages = ['projet', 'intention', 'synopsis', 'animatique', 'sonorite'];
 
 export default class Router {
     constructor(url) {
