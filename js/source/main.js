@@ -27,11 +27,12 @@ class App {
     
     initializeListeners() {
         this.$els.document.on('ready', this.onDocumentReady.bind(this));
-        this.$els.window.on('hashchange', this.onPageChange.bind(this));
+        this.$els.window.on('hashchange', this.detectPage.bind(this));
     }
     
     onDocumentReady() {
         this.detectPage();
+        new Video();
     }
     
     detectPage() {
@@ -45,25 +46,21 @@ class App {
             page = 'projet';
         }
         if(this.page !== page) {
-            if(this.audioPlayer) {
-                delete this.audioPlayer;
-            }
-            let pager = new Pager(page);
-            pager.fillContainer(this.$els.sectionContainer, this.onContentLoaded.bind(this));
-
+            this.animateContainerLeave(() => {
+                if(this.audioPlayer) {
+                    delete this.audioPlayer;
+                }
+                let pager = new Pager(page);
+                pager.fillContainer(this.$els.sectionContainer, this.onContentLoaded.bind(this));
+            });
         }
         this.page = page;
-    }
-    
-    onPageChange() {
-        this.animateContainerLeave(this.detectPage.bind(this));
     }
 
     onContentLoaded() {
         if(['sonorite'].indexOf(this.page) > -1) {
             this.audioPlayer = new AudioPlayer();
         }
-        new Video();
 
         if(this.firstRun) {
             this.firstRun = false;
