@@ -1,0 +1,55 @@
+.film{
+  position: fixed;
+  z-index: 300;
+  top: 50%;
+  left: 50%;
+  height: 70vh;
+  transform: translate(-50%, -50%);
+  -webkit-clip-path: circle(0px at 320px 180px);
+}
+
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  z-index: -10;
+}
+
+#video_player_exit{
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+}
+
+#video_player_exit.active::before{
+  transform: rotate(45deg);
+}
+
+#video_player_exit.active::after{
+  transform: rotate(-45deg);
+}
+
+#video_player_exit::before, #video_player_exit::after{
+  content: '';
+  position: absolute;
+  left: 15px;
+  height: 50px;
+  width: 8px;
+  background-color: #fff;
+  transition: all .5s;
+}
+
+#video_player_exit::after{
+  transform: rotate(0deg);
+}
+
+#video_player_exit::before{
+  transform: rotate(0deg);
+}
