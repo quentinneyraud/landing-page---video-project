@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import Router from './Router';
 import Pager from './Pager';
+import Video from './Video';
 import TweenMax from 'gsap';
 import './../../node_modules/gsap/src/minified/plugins/ScrollToPlugin.min';
 import AudioPlayer from './AudioPlayer';
@@ -61,8 +62,9 @@ class App {
     onContentLoaded() {
         if(['sonorite'].indexOf(this.page) > -1) {
             this.audioPlayer = new AudioPlayer();   
+        }else if(['projet'].indexOf(this.page) > -1) {
+            new Video();
         }
-        console.log('first run', this.firstRun);
         if(this.firstRun) {
             this.firstRun = false;
         }else{
