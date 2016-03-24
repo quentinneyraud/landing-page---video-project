@@ -4,6 +4,11 @@
  *                *
  ******************/
 
+
+body {
+    font-size: 1.6rem; // ==== 16px
+}
+
 .text {
     font-family: $font--main;
     color: $color--text;
@@ -20,6 +25,10 @@
     &--right {
         padding-left: 35%;
     }
+}
+
+.title {
+    text-transform: uppercase;
 }
 
 .title1 {
@@ -66,6 +75,11 @@
     background-color: $color--medium;
     color: $color--lighter;
     font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 a.link {

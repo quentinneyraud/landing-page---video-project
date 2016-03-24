@@ -11,6 +11,7 @@ class App {
         this.initializeElements();
         this.initializeListeners();
         this.animateHeader();
+        this.animateFloatingImage();
     }
     
     initializeElements() {
@@ -18,6 +19,7 @@ class App {
             document: $(document),
             window: $(window),
             body: $('body'),
+            header: $('.main-header'),
             sectionContainer: $('.sectionContainer')
         }
     }
@@ -85,16 +87,27 @@ class App {
     }
 
     animateHeader() {
-        let $header = $('.main-header', this.$els.body)
-        let $panelTitles = $('.main__nav .panel__title', $header);
+        let $panelTitles = $('.main__nav .panel__title', this.$els.header);
 
         let controller = new ScrollMagic.Controller();
 
         let tween = TweenMax.from($panelTitles, 1, {autoAlpha: 0});
 
-        new ScrollMagic.Scene({triggerElement: $header, duration: 700})
+        new ScrollMagic.Scene({triggerElement: this.$els.header, duration: 700})
             .setTween(tween)
             //.addIndicators({name: "staggering"}) // add indicators (requires plugin)
+            .addTo(controller);
+    }
+
+    animateFloatingImage() {
+        let $flImage = $("#floating-image", this.$els.body);
+
+        let controller = new ScrollMagic.Controller();
+
+        let tween = TweenMax.from($flImage, 1, {top: "160vh", rotation: "+=90", transformOrigin:"50% 50%"});
+
+        new ScrollMagic.Scene({triggerElement: this.$els.header, duration: 10000})
+            .setTween(tween)
             .addTo(controller);
     }
 }
