@@ -20,6 +20,17 @@
   z-index: -10;
 }
 
+#video_player{
+  margin-top: 25px;
+  height: 150px;
+  fill: #2b2b2b;
+  transition: all .5s;
+  cursor: pointer;
+}
+#video_player:hover{
+  fill: #000;
+}
+
 #video_player_exit{
   position: fixed;
   top: 30px;

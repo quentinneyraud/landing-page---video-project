@@ -58,13 +58,13 @@ class App {
     onPageChange() {
         this.animateContainerLeave(this.detectPage.bind(this));
     }
-    
+
     onContentLoaded() {
         if(['sonorite'].indexOf(this.page) > -1) {
-            this.audioPlayer = new AudioPlayer();   
-        }else if(['projet'].indexOf(this.page) > -1) {
-            new Video();
+            this.audioPlayer = new AudioPlayer();
         }
+        new Video();
+
         if(this.firstRun) {
             this.firstRun = false;
         }else{
