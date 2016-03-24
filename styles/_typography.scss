@@ -4,6 +4,11 @@
  *                *
  ******************/
 
+
+body {
+    font-size: 1.6rem; // ==== 16px
+}
+
 .text {
     font-family: $font--main;
     color: $color--text;
@@ -20,6 +25,10 @@
     &--right {
         padding-left: 35%;
     }
+}
+
+.title {
+    text-transform: uppercase;
 }
 
 .title1 {
@@ -68,16 +77,30 @@
     font-weight: bold;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 a.link {
     font-family: $lato;
     font-style: italic;
 }
 
+.center {
+    text-align: center;
+}
+
 .exergue {
-    padding: 10px 50px;
-    font-size: 40px;
-    font-family: $circular--bold;
-    border-top: solid 1px #000;
-    border-bottom: solid 1px #000;
+    display: inline-block;
     margin: 15px 0;
+    padding: 20px 30px;
+
+    text-align: center;
+    font-size: 2rem;
+    font-family: $lato;
+    font-style: italic;
+    font-weight: 600;
+    border-top: solid 1px $color--medium;
+    border-bottom: solid 1px $color--medium;
 }

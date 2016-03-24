@@ -58,7 +58,7 @@ $circular--book-italic: 'Circular Book Italic';
 $hanskendrick--light: 'Hanskendrick Light';
 $lato: 'Lato';
 
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,600italic);
 @include font-face($goku, '../fonts/goku/goku-webfont');
 @include font-face($circular--medium, '../fonts/circular/Circular-Medium');
 @include font-face($circular--bold, '../fonts/circular/Circular-Bold');

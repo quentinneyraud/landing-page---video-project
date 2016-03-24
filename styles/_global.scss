@@ -32,21 +32,10 @@ html {
     background: $color--main;
 }
 
-
-body {
-    font-size: 1.6rem; // ==== 16px
-}
-
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.title {
-    text-transform: uppercase;
-
-    &--h1 {}
-    &--h2 {}
-    &--h3 {}
+#floating-image {
+    position: absolute;
+    width: 500px;
+    transform: scaleY(-1);
+    left: -30%;
+    top: -100%;
 }
