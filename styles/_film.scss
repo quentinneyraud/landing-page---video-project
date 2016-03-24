@@ -5,7 +5,7 @@
     left: 50%;
     height: 70vh;
     transform: translate(-50%, -50%);
-    -webkit-clip-path: circle(0px at 320px 180px);
+    clip-path: circle(0px at 320px 180px);
 }
 
 .overlay {

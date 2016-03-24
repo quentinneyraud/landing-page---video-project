@@ -33,6 +33,18 @@
         font-family: $lato;
         font-weight: 300;
     }
+
+    &__authors {
+        position: absolute;
+        z-index: 200;
+        font-size: 16px;
+        text-transform: uppercase;
+        padding-top: 20px;
+        padding-left: 20px;
+        color: #fff;
+        font-family: $lato;
+        font-weight: 300;
+    }
 }
 
 
