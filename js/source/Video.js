@@ -27,6 +27,7 @@ export default class Video {
 
     initializeListeners() {
         $('#video_player').on('click', this.showVideo.bind(this));
+        this.$els.exitButton.on('click', this.hideVideo.bind(this));
         document.addEventListener('keydown', this.onKeyDown.bind(this));
     }
 
